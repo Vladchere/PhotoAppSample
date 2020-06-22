@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8693626F249FE43900B2BB8F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693626E249FE43900B2BB8F /* Image.swift */; };
 		86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED15249F42E200E09CEF /* AppDelegate.swift */; };
 		86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED17249F42E200E09CEF /* SceneDelegate.swift */; };
-		86A2ED1A249F42E200E09CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED19249F42E200E09CEF /* ViewController.swift */; };
 		86A2ED1D249F42E200E09CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2ED1B249F42E200E09CEF /* Main.storyboard */; };
 		86A2ED1F249F42E500E09CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A2ED1E249F42E500E09CEF /* Assets.xcassets */; };
 		86A2ED22249F42E500E09CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2ED20249F42E500E09CEF /* LaunchScreen.storyboard */; };
+		86A2ED2A249F53A500E09CEF /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED29249F53A500E09CEF /* PhotosCollectionViewController.swift */; };
+		86A2ED2C249F580C00E09CEF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED2B249F580C00E09CEF /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8693626E249FE43900B2BB8F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		86A2ED12249F42E200E09CEF /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2ED15249F42E200E09CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2ED17249F42E200E09CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86A2ED19249F42E200E09CEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86A2ED1C249F42E200E09CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86A2ED1E249F42E500E09CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86A2ED21249F42E500E09CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86A2ED23249F42E500E09CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A2ED29249F53A500E09CEF /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		86A2ED2B249F580C00E09CEF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		865A2F2C24A095F6005BB6E7 /* ViewCotrollers */ = {
+			isa = PBXGroup;
+			children = (
+				86A2ED29249F53A500E09CEF /* PhotosCollectionViewController.swift */,
+				86A2ED2B249F580C00E09CEF /* PhotoCell.swift */,
+			);
+			path = ViewCotrollers;
+			sourceTree = "<group>";
+		};
+		865A2F2D24A09614005BB6E7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				86A2ED1B249F42E200E09CEF /* Main.storyboard */,
+				86A2ED20249F42E500E09CEF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		865A2F2E24A09621005BB6E7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				86A2ED1E249F42E500E09CEF /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		865A2F2F24A0962D005BB6E7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				86A2ED15249F42E200E09CEF /* AppDelegate.swift */,
+				86A2ED17249F42E200E09CEF /* SceneDelegate.swift */,
+				86A2ED23249F42E500E09CEF /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		86936270249FE44D00B2BB8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8693626E249FE43900B2BB8F /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		86A2ED09249F42E200E09CEF = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +104,11 @@
 		86A2ED14249F42E200E09CEF /* PhotoApp */ = {
 			isa = PBXGroup;
 			children = (
-				86A2ED15249F42E200E09CEF /* AppDelegate.swift */,
-				86A2ED17249F42E200E09CEF /* SceneDelegate.swift */,
-				86A2ED19249F42E200E09CEF /* ViewController.swift */,
-				86A2ED1B249F42E200E09CEF /* Main.storyboard */,
-				86A2ED1E249F42E500E09CEF /* Assets.xcassets */,
-				86A2ED20249F42E500E09CEF /* LaunchScreen.storyboard */,
-				86A2ED23249F42E500E09CEF /* Info.plist */,
+				865A2F2F24A0962D005BB6E7 /* SupportingFiles */,
+				865A2F2C24A095F6005BB6E7 /* ViewCotrollers */,
+				86936270249FE44D00B2BB8F /* Models */,
+				865A2F2D24A09614005BB6E7 /* Storyboards */,
+				865A2F2E24A09621005BB6E7 /* Sources */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -138,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A2ED1A249F42E200E09CEF /* ViewController.swift in Sources */,
+				86A2ED2A249F53A500E09CEF /* PhotosCollectionViewController.swift in Sources */,
 				86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */,
+				8693626F249FE43900B2BB8F /* Image.swift in Sources */,
+				86A2ED2C249F580C00E09CEF /* PhotoCell.swift in Sources */,
 				86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D28YKYJC2T;
-				INFOPLIST_FILE = PhotoApp/Info.plist;
+				INFOPLIST_FILE = PhotoApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D28YKYJC2T;
-				INFOPLIST_FILE = PhotoApp/Info.plist;
+				INFOPLIST_FILE = PhotoApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
