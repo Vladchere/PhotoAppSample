@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8693626F249FE43900B2BB8F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693626E249FE43900B2BB8F /* Image.swift */; };
+		8693626F249FE43900B2BB8F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693626E249FE43900B2BB8F /* Photo.swift */; };
 		86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED15249F42E200E09CEF /* AppDelegate.swift */; };
 		86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED17249F42E200E09CEF /* SceneDelegate.swift */; };
 		86A2ED1D249F42E200E09CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2ED1B249F42E200E09CEF /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8693626E249FE43900B2BB8F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		8693626E249FE43900B2BB8F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		86A2ED12249F42E200E09CEF /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2ED15249F42E200E09CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2ED17249F42E200E09CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		86936270249FE44D00B2BB8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8693626E249FE43900B2BB8F /* Image.swift */,
+				8693626E249FE43900B2BB8F /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			files = (
 				86A2ED2A249F53A500E09CEF /* PhotosCollectionViewController.swift in Sources */,
 				86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */,
-				8693626F249FE43900B2BB8F /* Image.swift in Sources */,
+				8693626F249FE43900B2BB8F /* Photo.swift in Sources */,
 				86A2ED2C249F580C00E09CEF /* PhotoCell.swift in Sources */,
 				86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */,
 			);

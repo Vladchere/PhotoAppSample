@@ -10,9 +10,9 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
     
-    private var images: [Image] = []
-    private let itemsPerRow: CGFloat = 1
-    private let sectionInserts = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+    private var images: [Photo] = []
+    private let itemsPerRow: CGFloat = 2
+    private let sectionInserts = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PhotoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
         let image = images[indexPath.item]
         
         DispatchQueue.global().async {
@@ -49,7 +49,7 @@ class PhotosCollectionViewController: UICollectionViewController {
             let decoder = JSONDecoder()
             
             do {
-                self.images = try decoder.decode([Image].self, from: data)
+                self.images = try decoder.decode([Photo].self, from: data)
             } catch let error {
                 print(error.localizedDescription)
             }
