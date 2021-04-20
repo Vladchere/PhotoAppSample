@@ -8,15 +8,14 @@
 
 import Foundation
 
-struct Photo: Codable {
+enum URLType: String, Decodable, CaseIterable {
+	case full
+	case raw
+	case regular
+	case small
+	case thumb
+}
 
-	public let urls: [URLType: URL]
-
-	enum URLType: String, Codable {
-		case full
-		case raw
-		case regular
-		case small
-		case thumb
-	}
+struct Photo: Decodable {
+	let urls: [URLType.AllCases]
 }

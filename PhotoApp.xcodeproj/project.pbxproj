@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86795964262F1B7700004A55 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795963262F1B7700004A55 /* NetworkManager.swift */; };
 		8693626F249FE43900B2BB8F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693626E249FE43900B2BB8F /* Photo.swift */; };
 		86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED15249F42E200E09CEF /* AppDelegate.swift */; };
 		86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED17249F42E200E09CEF /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86795963262F1B7700004A55 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8693626E249FE43900B2BB8F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		86A2ED12249F42E200E09CEF /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2ED15249F42E200E09CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		86795966262F1C7F00004A55 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				86795963262F1B7700004A55 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		86936270249FE44D00B2BB8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 				86936270249FE44D00B2BB8F /* Models */,
 				865A2F2D24A09614005BB6E7 /* Storyboards */,
 				865A2F2E24A09621005BB6E7 /* Sources */,
+				86795966262F1C7F00004A55 /* Managers */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86795964262F1B7700004A55 /* NetworkManager.swift in Sources */,
 				86A2ED2A249F53A500E09CEF /* PhotosCollectionViewController.swift in Sources */,
 				86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */,
 				8693626F249FE43900B2BB8F /* Photo.swift in Sources */,

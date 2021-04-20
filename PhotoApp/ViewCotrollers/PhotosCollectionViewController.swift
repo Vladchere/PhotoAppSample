@@ -10,32 +10,41 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
     
-    private var images: [Photo] = []
+    private var photos: Photo?
     private let itemsPerRow: CGFloat = 2
     private let sectionInserts = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+	private let urlString = "https://api.unsplash.com/photos/random?client_id=8J_Nydt1h5gF5ANS5x1eM-VBGTnRk4xFCgCdIU4aGYs&count=30"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchImages()
+
+		NetworkManager.shared.fetchData(from: urlString) { photos in
+			DispatchQueue.main.async {
+				self.photos = photos
+				self.collectionView.reloadData()
+			}
+		}
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+		return photos?.urls.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
-        let image = images[indexPath.item]
+
+		if let photoUrl = photos?.urls[indexPath.item] {
         
-        DispatchQueue.global().async {
-            guard let stringURL = image.urls["regular"] else { return }
-            guard let imageURL = URL(string: stringURL) else { return }
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            
-            DispatchQueue.main.async {
-                cell.imageView.image = UIImage(data: imageData)
-            }
-        }
+			DispatchQueue.global().async {
+				guard let stringURL = photoUrl.re else { return }
+				guard let imageURL = URL(string: stringURL) else { return }
+				guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+				DispatchQueue.main.async {
+					cell.imageView.image = UIImage(data: imageData)
+				}
+			}
+		}
     
         return cell
     }
