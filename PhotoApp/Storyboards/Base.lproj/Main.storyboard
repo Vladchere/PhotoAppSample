@@ -43,7 +43,7 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="tiW-ER-9jE" id="Tr6-mo-wbF"/>
+                                    <outlet property="photoView" destination="tiW-ER-9jE" id="Tr6-mo-wbF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

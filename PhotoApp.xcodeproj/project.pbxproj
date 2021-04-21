@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860878A926305492008EFC4E /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860878A826305492008EFC4E /* Urls.swift */; };
 		86795964262F1B7700004A55 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795963262F1B7700004A55 /* NetworkManager.swift */; };
 		8693626F249FE43900B2BB8F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693626E249FE43900B2BB8F /* Photo.swift */; };
+		86A1869D263069D800C5A81B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1869C263069D800C5A81B /* ImageView.swift */; };
+		86A186A1263070D000C5A81B /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A186A0263070D000C5A81B /* ImageManager.swift */; };
 		86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED15249F42E200E09CEF /* AppDelegate.swift */; };
 		86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2ED17249F42E200E09CEF /* SceneDelegate.swift */; };
 		86A2ED1D249F42E200E09CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A2ED1B249F42E200E09CEF /* Main.storyboard */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860878A826305492008EFC4E /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		86795963262F1B7700004A55 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8693626E249FE43900B2BB8F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		86A1869C263069D800C5A81B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		86A186A0263070D000C5A81B /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		86A2ED12249F42E200E09CEF /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A2ED15249F42E200E09CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86A2ED17249F42E200E09CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,11 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		860878A52630515A008EFC4E /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				86A2ED2B249F580C00E09CEF /* PhotoCell.swift */,
+				86A1869C263069D800C5A81B /* ImageView.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
 		865A2F2C24A095F6005BB6E7 /* ViewCotrollers */ = {
 			isa = PBXGroup;
 			children = (
 				86A2ED29249F53A500E09CEF /* PhotosCollectionViewController.swift */,
-				86A2ED2B249F580C00E09CEF /* PhotoCell.swift */,
 			);
 			path = ViewCotrollers;
 			sourceTree = "<group>";
@@ -79,18 +93,20 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		86795966262F1C7F00004A55 /* Managers */ = {
+		86795966262F1C7F00004A55 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				86795963262F1B7700004A55 /* NetworkManager.swift */,
+				86A186A0263070D000C5A81B /* ImageManager.swift */,
 			);
-			path = Managers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		86936270249FE44D00B2BB8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8693626E249FE43900B2BB8F /* Photo.swift */,
+				860878A826305492008EFC4E /* Urls.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,11 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				865A2F2F24A0962D005BB6E7 /* SupportingFiles */,
+				860878A52630515A008EFC4E /* VIews */,
 				865A2F2C24A095F6005BB6E7 /* ViewCotrollers */,
 				86936270249FE44D00B2BB8F /* Models */,
 				865A2F2D24A09614005BB6E7 /* Storyboards */,
 				865A2F2E24A09621005BB6E7 /* Sources */,
-				86795966262F1C7F00004A55 /* Managers */,
+				86795966262F1C7F00004A55 /* Services */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -151,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Vladislav Cheremisov";
 				TargetAttributes = {
 					86A2ED11249F42E200E09CEF = {
@@ -195,11 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A1869D263069D800C5A81B /* ImageView.swift in Sources */,
 				86795964262F1B7700004A55 /* NetworkManager.swift in Sources */,
 				86A2ED2A249F53A500E09CEF /* PhotosCollectionViewController.swift in Sources */,
+				86A186A1263070D000C5A81B /* ImageManager.swift in Sources */,
 				86A2ED16249F42E200E09CEF /* AppDelegate.swift in Sources */,
 				8693626F249FE43900B2BB8F /* Photo.swift in Sources */,
 				86A2ED2C249F580C00E09CEF /* PhotoCell.swift in Sources */,
+				860878A926305492008EFC4E /* Urls.swift in Sources */,
 				86A2ED18249F42E200E09CEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +272,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -312,6 +333,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
