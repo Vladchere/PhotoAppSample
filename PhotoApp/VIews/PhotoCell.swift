@@ -11,11 +11,13 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
 	
 	@IBOutlet weak var photoView: UIImageView!
-
+//	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
 	func configure(with photo: Photo) {
 		if let regularUrlPhoto = photo.urls?.regular {
-			photoView.fetchImage(from: regularUrlPhoto)
-			print(photoView.image)
+			print(regularUrlPhoto)
+//			photoView.fetchImage(from: regularUrlPhoto)
+//			activityIndicator.stopAnimating()
 		}
 	}
 }
